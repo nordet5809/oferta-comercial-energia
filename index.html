@@ -229,6 +229,63 @@ section{padding:96px 0}
 .calc-detail{margin:8px 0 0;color:var(--ink-dim);font-size:.93rem}
 .calc-foot{margin-top:16px;font-size:.88rem;color:var(--ink-faint)}
 
+/* ---------- Calculadora de consumo (completa) ---------- */
+.calc-full{margin-top:44px;border:1px solid rgba(255,184,28,.35);border-radius:22px;overflow:hidden;background:var(--night-3)}
+.calc-head{padding:28px 32px 0}
+.calc-head h3{font-size:1.15rem}
+.calc-head p{color:var(--ink-dim);margin:8px 0 0;font-size:.97rem}
+.loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:20px 32px 0}
+.loc-btn{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:14px;padding:16px 14px;text-align:left;cursor:pointer;color:var(--ink);font:inherit;transition:all .18s}
+.loc-btn strong{display:block;font-size:1rem}
+.loc-btn span{display:block;color:var(--ink-dim);font-size:.84rem;margin-top:3px;line-height:1.4}
+.loc-btn.on{border-color:var(--amber);background:rgba(255,184,28,.13)}
+.loc-btn.on strong{color:var(--amber-2)}
+.eq-head{padding:26px 32px 6px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.eq-head h4{margin:0;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:800}
+.eq-head p{margin:0;color:var(--ink-faint);font-size:.86rem}
+.eq-list{padding:10px 20px 6px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.eq-item{border:1px solid var(--line);border-radius:14px;padding:14px;background:rgba(255,255,255,.02);transition:border-color .18s, background .18s}
+.eq-item.active{border-color:rgba(255,184,28,.55);background:rgba(255,184,28,.06)}
+.eq-top{display:flex;align-items:flex-start;gap:10px}
+.eq-check{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--amber);cursor:pointer}
+.eq-name{font-weight:700;font-size:.97rem;line-height:1.25}
+.eq-watts{color:var(--ink-faint);font-size:.82rem}
+.eq-controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.eq-field label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);font-weight:800;margin-bottom:5px}
+.eq-field input{width:100%;background:#0B1526;border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:9px 10px;font:inherit;font-size:.95rem}
+.eq-sim{margin-top:11px;display:flex;align-items:center;gap:8px;font-size:.86rem;color:var(--ink-dim);cursor:pointer}
+.eq-sim input{accent-color:var(--amber);width:17px;height:17px}
+.eq-sub{margin-top:8px;font-size:.84rem;color:var(--amber-2);font-weight:700;min-height:1.2em}
+.eq-item:not(.active) .eq-controls,.eq-item:not(.active) .eq-sim{opacity:.38;pointer-events:none}
+.custom-box{margin:14px 20px 0;border:1px dashed rgba(255,255,255,.22);border-radius:14px;padding:18px}
+.custom-box h4{margin:0 0 4px;font-size:.95rem}
+.custom-box p{margin:0 0 14px;color:var(--ink-dim);font-size:.88rem}
+.custom-form{display:grid;grid-template-columns:1.4fr .7fr .7fr .7fr auto;gap:10px;align-items:end}
+.custom-form label{display:block;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-faint);font-weight:800;margin-bottom:5px}
+.custom-form input{width:100%;background:#0B1526;border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:10px;font:inherit;font-size:.94rem}
+.btn-add{background:var(--amber);color:#161006;border:none;border-radius:10px;padding:11px 16px;font-weight:800;cursor:pointer;font:inherit;font-size:.92rem;white-space:nowrap}
+.custom-list{margin-top:12px;display:grid;gap:8px}
+.custom-row{display:flex;justify-content:space-between;gap:12px;align-items:center;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.92rem}
+.custom-row button{background:none;border:1px solid var(--line);color:#FF9A7A;border-radius:8px;padding:5px 10px;cursor:pointer;font:inherit;font-size:.82rem;font-weight:700}
+.calc-results{margin-top:22px;background:linear-gradient(160deg,#131F38,#0B1526);border-top:1px solid var(--line);padding:28px 32px 32px}
+.res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+.res-card{border:1px solid var(--line);border-radius:14px;padding:16px;background:rgba(255,255,255,.03)}
+.res-card .rk{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:800}
+.res-card .rvv{font-family:"Anton",sans-serif;font-size:1.7rem;color:var(--ink);line-height:1.1;margin-top:6px}
+.res-card .rvv small{font-size:.55em;color:var(--ink-dim)}
+.res-card.highlight{border-color:rgba(255,184,28,.55);background:rgba(255,184,28,.08)}
+.res-card.highlight .rvv{color:var(--amber-2)}
+.rec-box{margin-top:16px;border:1px solid rgba(255,184,28,.4);border-radius:14px;padding:20px;background:rgba(255,184,28,.07)}
+.rec-box h4{margin:0;font-family:"Anton",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.03em;font-size:1.25rem;color:var(--amber-2)}
+.rec-box p{margin:8px 0 0;color:var(--ink-dim)}
+.rec-box p strong{color:var(--ink)}
+.rec-specs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.rec-specs span{border:1px solid var(--line);background:rgba(6,11,22,.45);border-radius:999px;padding:7px 12px;font-size:.86rem;font-weight:700}
+.calc-cta{margin-top:18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.calc-note{font-size:.84rem;color:var(--ink-faint);margin-top:12px}
+@media(max-width:900px){.eq-list{grid-template-columns:1fr}.res-grid{grid-template-columns:1fr 1fr}.custom-form{grid-template-columns:1fr 1fr}.loc-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.res-grid{grid-template-columns:1fr}.calc-head,.calc-results{padding-left:20px;padding-right:20px}.loc-grid{padding-left:20px;padding-right:20px}.eq-head{padding-left:20px;padding-right:20px}}
+
 /* ---------- Vitrina ---------- */
 .showcase{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:10px}
 .browser{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0D1728;box-shadow:0 30px 70px rgba(0,0,0,.45)}
@@ -376,7 +433,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--ink-fain
         <span class="l2">se apaga,</span>
         <span class="l3">tu negocio <span class="glow-word">brilla.</span></span>
       </h1>
-      <p class="hero-sub">Vendes <strong>estaciones de energía, inversores, paneles y baterías</strong>: justo lo que Cuba entera busca cuando se va la luz. Nosotros te construimos la vitrina digital que trabaja por ti las 24 horas — catálogo vivo, calculadora de autonomía y pedidos directos a tu WhatsApp.</p>
+      <p class="hero-sub">Vendes <strong>estaciones de energía, inversores, paneles y baterías</strong>: justo lo que Cuba entera busca cuando se va la luz. Nosotros te construimos la vitrina digital que trabaja por ti las 24 horas — catálogo vivo, calculadora de consumo y pedidos directos a tu WhatsApp.</p>
       <div class="hero-ctas">
         <a class="btn btn-wa" href="https://wa.me/5353237783?text=Hola%20Orville%2C%20tengo%20un%20negocio%20de%20energ%C3%ADa%20y%20quiero%20la%20p%C3%A1gina%20que%20vende%2024%2F7.%20Cu%C3%A9ntame%20c%C3%B3mo%20empezamos." target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
@@ -468,40 +525,68 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--ink-fain
   </div>
 </section>
 
-<!-- DEMO / CALCULADORA -->
+<!-- DEMO / CALCULADORA DE CONSUMO -->
 <section class="calc-sec" id="demo">
   <div class="wrap">
-    <p class="kicker rv">Demo en vivo · Pruébala ahora</p>
-    <h2 class="sec-title rv">Esto no es un adorno. Es la herramienta que tu cliente usará en tu página antes de escribirte.</h2>
-    <p class="sec-lead rv">La pregunta que más te hacen —<strong>“¿y eso cuánto me dura?”</strong>— respondida sola, en segundos, en tu propia página. El cliente llega a tu WhatsApp convencido y sabiendo exactamente qué necesita. Toca los equipos y mira:</p>
+    <p class="kicker rv">Demo en vivo · Calculadora de consumo</p>
+    <h2 class="sec-title rv">Calcula tu consumo y descubre el sistema solar que necesitas</h2>
+    <p class="sec-lead rv">Como la calculadora que usan las tiendas de energía: el cliente dice <strong>qué tiene, cuánto lo usa y qué enciende a la vez</strong>, y la página le calcula el consumo diario y le recomienda el sistema. Así llega a tu WhatsApp sabiendo qué pedir, sin las 20 preguntas de siempre. Pruébala:</p>
 
-    <div class="calc rv">
-      <div class="calc-left">
-        <h3>Calculadora de autonomía</h3>
-        <p class="calc-label">1 · Elige la capacidad de la estación</p>
-        <div class="caps" role="group" aria-label="Capacidad de la estación">
-          <button class="cap" data-wh="768">768 Wh</button>
-          <button class="cap on" data-wh="1024">1 024 Wh</button>
-          <button class="cap" data-wh="2048">2 048 Wh</button>
-          <button class="cap" data-wh="3600">3 600 Wh</button>
-        </div>
-        <p class="calc-label">2 · Marca lo que quieres mantener encendido</p>
-        <div class="apps" role="group" aria-label="Equipos a alimentar">
-          <button class="app on" data-w="40" data-name="luces LED">Luces LED · 40 W</button>
-          <button class="app on" data-w="75" data-name="el ventilador">Ventilador · 75 W</button>
-          <button class="app" data-w="100" data-name="el televisor">Televisor · 100 W</button>
-          <button class="app on" data-w="15" data-name="el router wifi">Router wifi · 15 W</button>
-          <button class="app" data-w="65" data-name="la laptop">Laptop · 65 W</button>
-          <button class="app" data-w="150" data-name="el refrigerador">Refrigerador · 150 W</button>
-        </div>
+    <div class="calc-full rv" id="calcFull">
+      <div class="calc-head">
+        <h3>Calculadora de consumo energético</h3>
+        <p>Descubre cuánta energía consumes y el sistema solar perfecto para tus necesidades. Los watts son valores típicos de referencia; si tu equipo consume distinto, ajústalo en “Otros equipos”.</p>
       </div>
-      <div class="calc-right" aria-live="polite">
-        <h3>Autonomía estimada</h3>
-        <div class="hours"><span id="hoursNum">6,6</span> <small>horas</small></div>
-        <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
-        <p class="verdict" id="verdict">Te alcanza para pasar la noche con luz, ventilador y conexión.</p>
-        <p class="calc-detail" id="calcDetail">Consumo total: 130 W · Capacidad útil estimada: 85% de la batería.</p>
-        <p class="calc-foot">En la página de tu negocio, este cálculo termina en un botón: <strong>“Quiero este equipo”</strong> — y el mensaje llega listo a tu WhatsApp.</p>
+
+      <div style="padding:22px 32px 0"><p class="calc-label" style="margin:0">1 · Tipo de ubicación</p><p style="margin:4px 0 0;color:var(--ink-dim);font-size:.9rem">Selecciona si es para hogar, negocio o empresa. Cambia la recomendación de respaldo y crecimiento.</p></div>
+      <div class="loc-grid" role="group" aria-label="Tipo de ubicación">
+        <button class="loc-btn on" data-loc="hogar" type="button"><strong>Hogar</strong><span>Para la casa: nevera, luces, ventilación y entretenimiento.</span></button>
+        <button class="loc-btn" data-loc="negocio" type="button"><strong>Negocio</strong><span>Paladar, cafetería, tienda o taller que no puede parar en el apagón.</span></button>
+        <button class="loc-btn" data-loc="empresa" type="button"><strong>Empresa</strong><span>Oficinas y locales con computadoras, clima y uso intensivo.</span></button>
+      </div>
+
+      <div class="eq-head">
+        <h4>2 · Selecciona tus equipos</h4>
+        <p>Marca, ajusta cantidad y horas/día. Indica cuáles usas al mismo tiempo.</p>
+      </div>
+      <div class="eq-list" id="eqList"></div>
+
+      <div class="custom-box">
+        <h4>+ Otros equipos</h4>
+        <p>¿Tienes algo que no está en la lista? Agrégalo con su nombre, watts y horas de uso.</p>
+        <form class="custom-form" id="customForm">
+          <div><label for="cName">Nombre del equipo</label><input id="cName" type="text" placeholder="Ej: bomba de agua" autocomplete="off" /></div>
+          <div><label for="cWatts">Watts</label><input id="cWatts" type="number" min="1" max="10000" placeholder="200" /></div>
+          <div><label for="cHours">Horas/día</label><input id="cHours" type="number" min="0.1" max="24" step="0.5" placeholder="2" /></div>
+          <div><label for="cQty">Cantidad</label><input id="cQty" type="number" min="1" max="50" value="1" /></div>
+          <button class="btn-add" type="submit">Agregar</button>
+        </form>
+        <div class="custom-list" id="customList"></div>
+      </div>
+
+      <div class="calc-results" aria-live="polite">
+        <h3 style="font-size:1.05rem;letter-spacing:.06em">Tu resultado</h3>
+        <div class="res-grid">
+          <div class="res-card"><div class="rk">Consumo diario</div><div class="rvv"><span id="resDaily">0,00</span> <small>kWh/día</small></div></div>
+          <div class="res-card"><div class="rk">Consumo mensual</div><div class="rvv"><span id="resMonthly">0</span> <small>kWh/mes</small></div></div>
+          <div class="res-card"><div class="rk">Potencia simultánea</div><div class="rvv"><span id="resPeak">0</span> <small>W a la vez</small></div></div>
+          <div class="res-card highlight"><div class="rk">Potencia conectada</div><div class="rvv"><span id="resTotalW">0</span> <small>W total</small></div></div>
+        </div>
+
+        <div class="rec-box">
+          <h4 id="recTitle">Marca tus equipos para ver la recomendación</h4>
+          <p id="recText">Cuando marques al menos un equipo, aquí verás el sistema recomendado: paneles, batería e inversor dimensionados para tu consumo real en Cuba (con unas 5 horas de sol útil al día).</p>
+          <div class="rec-specs" id="recSpecs"></div>
+        </div>
+
+        <div class="calc-cta">
+          <a class="btn btn-wa" id="waCalcBtn" href="https://wa.me/5353237783?text=Hola%2C%20us%C3%A9%20la%20calculadora%20de%20consumo%20y%20quiero%20cotizar%20el%20sistema%20recomendado." target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+            Pedir este sistema por WhatsApp
+          </a>
+          <span style="color:var(--ink-dim);font-size:.92rem">El mensaje llega con tu consumo y la recomendación ya escritos.</span>
+        </div>
+        <p class="calc-note">Estimación orientativa. El dimensionamiento final depende de la marca y eficiencia de tus equipos, la orientación de los paneles y las horas de apagón de tu zona. En la página de tu negocio, esta misma calculadora llevaría tu número de WhatsApp.</p>
       </div>
     </div>
   </div>
@@ -579,8 +664,8 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--ink-fain
       </article>
       <article class="inc rv">
         <span class="n">03</span>
-        <h3>Calculadora de autonomía</h3>
-        <p>La misma demo que probaste arriba, con tus equipos. El cliente <strong>llega convencido</strong>, no a hacerte las preguntas de siempre.</p>
+        <h3>Calculadora de consumo</h3>
+        <p>La misma demo que probaste arriba, con tus equipos y tu WhatsApp. El cliente calcula su consumo diario y <strong>llega convencido con el sistema ya recomendado</strong>, no a hacerte las preguntas de siempre.</p>
       </article>
       <article class="inc rv">
         <span class="n">04</span>
@@ -707,63 +792,179 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--ink-fain
     }
   }
 
-  /* Calculadora de autonomía */
-  var wh = 1024;
-  var hoursNum = document.getElementById("hoursNum");
-  var meterFill = document.getElementById("meterFill");
-  var verdict = document.getElementById("verdict");
-  var detail = document.getElementById("calcDetail");
+  /* Calculadora de consumo energético */
+  var EQUIPOS = [
+    {id:"nevera", name:"Nevera / Refrigerador", watts:150, qty:1, hours:24, sim:true, on:true},
+    {id:"tv", name:"Televisor", watts:100, qty:1, hours:5, sim:true, on:true},
+    {id:"aire", name:"Aire acondicionado", watts:1200, qty:1, hours:6, sim:false, on:false},
+    {id:"iluminacion", name:"Iluminación", watts:60, qty:1, hours:6, sim:true, on:true},
+    {id:"ventilador", name:"Ventilador", watts:75, qty:1, hours:8, sim:true, on:true},
+    {id:"computadora", name:"Computadora", watts:200, qty:1, hours:5, sim:false, on:false},
+    {id:"microondas", name:"Microondas", watts:1200, qty:1, hours:0.5, sim:false, on:false},
+    {id:"batidora", name:"Batidora", watts:400, qty:1, hours:0.5, sim:false, on:false},
+    {id:"freidora", name:"Freidora", watts:1500, qty:1, hours:1, sim:false, on:false},
+    {id:"olla", name:"Olla eléctrica", watts:800, qty:1, hours:1.5, sim:false, on:false},
+    {id:"cocina", name:"Cocina eléctrica", watts:2000, qty:1, hours:2, sim:false, on:false}
+  ];
+  var customEquipos = [];
+  var locActual = "hogar";
+  var eqList = document.getElementById("eqList");
 
-  function fmt(n){
-    return n.toFixed(1).replace(".", ",");
+  function fmtES(n, dec){
+    return n.toFixed(dec).replace(".", ",");
   }
-  function calc(){
-    var total = 0, names = [];
-    document.querySelectorAll(".app.on").forEach(function(b){
-      total += parseInt(b.getAttribute("data-w"), 10);
-      names.push(b.getAttribute("data-name"));
+  function fmtInt(n){ return Math.round(n).toLocaleString("es-ES"); }
+
+  function renderEquipos(){
+    if(!eqList) return;
+    eqList.innerHTML = "";
+    EQUIPOS.forEach(function(eq, idx){
+      var div = document.createElement("div");
+      div.className = "eq-item" + (eq.on ? " active" : "");
+      div.innerHTML =
+        '<div class="eq-top"><input class="eq-check" type="checkbox" data-act="on" data-idx="'+idx+'" '+(eq.on?'checked':'')+' aria-label="Incluir '+eq.name+'"><div><div class="eq-name">'+eq.name+'</div><div class="eq-watts">'+eq.watts+' W de referencia</div></div></div>' +
+        '<div class="eq-controls"><div class="eq-field"><label>Cantidad</label><input type="number" min="1" max="50" step="1" value="'+eq.qty+'" data-act="qty" data-idx="'+idx+'"></div>' +
+        '<div class="eq-field"><label>Horas / día</label><input type="number" min="0.1" max="24" step="0.5" value="'+eq.hours+'" data-act="hours" data-idx="'+idx+'"></div></div>' +
+        '<label class="eq-sim"><input type="checkbox" data-act="sim" data-idx="'+idx+'" '+(eq.sim?'checked':'')+'> Se usa al mismo tiempo que otros</label>' +
+        '<div class="eq-sub" data-sub="'+idx+'"></div>';
+      eqList.appendChild(div);
     });
-    if (total === 0) {
-      hoursNum.textContent = "0,0";
-      meterFill.style.width = "0%";
-      verdict.textContent = "Marca al menos un equipo para ver la autonomía.";
-      detail.textContent = "Consumo total: 0 W · Capacidad útil estimada: 85% de la batería.";
+    eqList.querySelectorAll("input").forEach(function(inp){
+      inp.addEventListener("change", function(){
+        var i = parseInt(inp.getAttribute("data-idx"),10);
+        var act = inp.getAttribute("data-act");
+        if(act==="on") EQUIPOS[i].on = inp.checked;
+        if(act==="sim") EQUIPOS[i].sim = inp.checked;
+        if(act==="qty") EQUIPOS[i].qty = Math.max(1, parseFloat(inp.value)||1);
+        if(act==="hours") EQUIPOS[i].hours = Math.min(24, Math.max(0, parseFloat(inp.value)||0));
+        renderEquiposActive();
+        calcConsumo();
+      });
+      inp.addEventListener("input", function(){
+        var i = parseInt(inp.getAttribute("data-idx"),10);
+        var act = inp.getAttribute("data-act");
+        if(act==="qty") EQUIPOS[i].qty = Math.max(1, parseFloat(inp.value)||1);
+        if(act==="hours") EQUIPOS[i].hours = Math.min(24, Math.max(0, parseFloat(inp.value)||0));
+        calcConsumo();
+      });
+    });
+  }
+  function renderEquiposActive(){
+    if(!eqList) return;
+    eqList.querySelectorAll(".eq-item").forEach(function(el, i){
+      el.classList.toggle("active", !!EQUIPOS[i].on);
+    });
+  }
+  function renderCustom(){
+    var box = document.getElementById("customList");
+    if(!box) return;
+    box.innerHTML = "";
+    customEquipos.forEach(function(c, i){
+      var row = document.createElement("div");
+      row.className = "custom-row";
+      var whd = c.watts * c.qty * c.hours;
+      row.innerHTML = "<span><strong>"+c.name+"</strong> · "+c.watts+" W × "+c.qty+" · "+String(c.hours).replace(".",",")+" h/día = <strong>"+fmtInt(whd)+" Wh/día</strong></span>";
+      var btn = document.createElement("button");
+      btn.type="button"; btn.textContent="Quitar";
+      btn.addEventListener("click", function(){ customEquipos.splice(i,1); renderCustom(); calcConsumo(); });
+      row.appendChild(btn);
+      box.appendChild(row);
+    });
+  }
+
+  function calcConsumo(){
+    var dailyWh = 0, totalW = 0, peakW = 0, anySim = false, countOn = 0;
+    EQUIPOS.forEach(function(eq, idx){
+      var subEl = document.querySelector('[data-sub="'+idx+'"]');
+      if(!eq.on){ if(subEl) subEl.textContent=""; return; }
+      countOn++;
+      var w = eq.watts * eq.qty;
+      var whd = w * eq.hours;
+      dailyWh += whd; totalW += w;
+      if(eq.sim){ peakW += w; anySim = true; }
+      if(subEl) subEl.textContent = fmtInt(whd) + " Wh/día · " + fmtInt(w) + " W";
+    });
+    customEquipos.forEach(function(c){
+      var w = c.watts * c.qty;
+      dailyWh += w * c.hours; totalW += w; peakW += w; anySim = true; countOn++;
+    });
+    if(!anySim) peakW = totalW;
+
+    var dailyKwh = dailyWh/1000;
+    var monthly = dailyKwh*30;
+    var elDaily=document.getElementById("resDaily"), elMonthly=document.getElementById("resMonthly"), elPeak=document.getElementById("resPeak"), elTotal=document.getElementById("resTotalW");
+    if(elDaily) elDaily.textContent = fmtES(dailyKwh,2);
+    if(elMonthly) elMonthly.textContent = fmtInt(monthly);
+    if(elPeak) elPeak.textContent = fmtInt(peakW);
+    if(elTotal) elTotal.textContent = fmtInt(totalW);
+
+    var recTitle=document.getElementById("recTitle"), recText=document.getElementById("recText"), recSpecs=document.getElementById("recSpecs");
+    var waBtn=document.getElementById("waCalcBtn");
+    if(!recTitle) return;
+    if(countOn===0 || dailyWh===0){
+      recTitle.textContent="Marca tus equipos para ver la recomendación";
+      recText.textContent="Cuando marques al menos un equipo, aquí verás el sistema recomendado: paneles, batería e inversor dimensionados para tu consumo real en Cuba (con unas 5 horas de sol útil al día).";
+      recSpecs.innerHTML="";
       return;
     }
-    var hours = (wh * 0.85) / total;
-    hoursNum.textContent = fmt(hours);
-    meterFill.style.width = Math.min(100, (hours / 14) * 100) + "%";
+    // Dimensionamiento: 5 HSP, rendimiento 0.80, batería para ~80% del consumo diario con DoD útil, inversor = pico *1.25
+    var panelWpNeeded = dailyWh / (5*0.80);
+    var numPaneles = Math.max(1, Math.ceil(panelWpNeeded/550));
+    var panelWp = numPaneles*550;
+    var battKwh = Math.max(1, Math.ceil((dailyKwh*0.85)/0.9));
+    var invNeeded = peakW*1.25;
+    var invSizes=[1000,1500,2000,3000,3600,5000,6000,8000,10000,12000];
+    var invW = invSizes.find(function(s){return s>=invNeeded;}) || Math.ceil(invNeeded/1000)*1000;
 
-    var v;
-    if (hours >= 10) v = "Te alcanza de sobra: pasas el apagón completo y te queda carga.";
-    else if (hours >= 6) v = "Te alcanza para pasar la noche con lo esencial encendido.";
-    else if (hours >= 3.5) v = "Cubre el tramo fuerte del apagón. Para más horas, sube la capacidad.";
-    else if (hours >= 1.5) v = "Autonomía corta: ese consumo pide una estación de mayor capacidad.";
-    else v = "Ese consumo agota la estación muy rápido: necesitas un sistema mayor o por inversor.";
-    verdict.textContent = v;
+    var sistema, desc;
+    var locLabel = locActual==="hogar"?"el hogar":(locActual==="negocio"?"el negocio":"la empresa");
+    if(dailyKwh < 2){ sistema="Sistema Esencial · Estación portátil + panel"; desc="Para "+locLabel+" con consumo ligero: luces, ventilador, TV y nevera por tramos. Una estación portátil de 1–2 kWh con panel plegable resuelve el apagón sin instalación fija."; }
+    else if(dailyKwh < 5){ sistema="Sistema Hogar · " + fmtES(invW/1000, invW%1000?1:0) + " kW con batería"; desc="El clásico para "+locLabel+": inversor con batería de litio y paneles en el techo. Cubre nevera todo el día, iluminación, ventilación y entretenimiento."; }
+    else if(dailyKwh < 10){ sistema="Sistema Plus · " + fmtES(invW/1000, invW%1000?1:0) + " kW híbrido"; desc="Para "+locLabel+" con aire acondicionado o cocina eléctrica por horas. Necesitas inversor híbrido, banco de baterías mayor y arreglo de paneles completo."; }
+    else if(dailyKwh < 20){ sistema="Sistema Negocio / Empresa · " + fmtES(invW/1000, invW%1000?1:0) + " kW"; desc="Consumo de negocio o empresa: varios equipos a la vez y clima. Sistema híbrido con respaldo amplio; conviene separar circuitos críticos (neveras, computadoras, iluminación) del resto."; }
+    else { sistema="Sistema a medida · " + fmtES(invW/1000, invW%1000?1:0) + " kW o superior"; desc="Consumo alto para "+locLabel+". Esto ya es un proyecto a medida: estudio de cargas por circuito, posible sistema trifásico o dos inversores en paralelo y banco de baterías escalable."; }
 
-    var lista = names.length > 2
-      ? names.slice(0, -1).join(", ") + " y " + names[names.length - 1]
-      : names.join(" y ");
-    detail.textContent = "Con " + lista + " · Consumo total: " + total + " W · Capacidad útil estimada: 85% de " + wh + " Wh.";
+    // Ajuste por tipo de ubicación
+    if(locActual==="negocio") desc += " Para un negocio se recomienda dejar 20–30% de reserva: perder frío o cerrar por apagón sale más caro que sobredimensionar un poco.";
+    if(locActual==="empresa") desc += " Para una empresa se recomienda respaldo prioritario para computadoras y red, y valorar crecimiento futuro antes de cerrar el número de paneles.";
+
+    recTitle.textContent = "Recomendado: " + sistema;
+    recText.innerHTML = "<strong>Consumes "+fmtES(dailyKwh,2)+" kWh al día ("+fmtInt(monthly)+" kWh al mes)</strong> y tu pico simultáneo es de <strong>"+fmtInt(peakW)+" W</strong>. " + desc;
+    recSpecs.innerHTML = "<span>"+numPaneles+" × panel de 550 W ("+fmtInt(panelWp)+" Wp)</span><span>Batería ≈ "+battKwh+" kWh útiles</span><span>Inversor "+fmtInt(invW)+" W</span><span>Para "+locLabel+"</span>";
+
+    if(waBtn){
+      var msg = "Hola, usé la calculadora de consumo. Es para un " + (locActual==="hogar"?"hogar":locActual) + ". Mi consumo es " + fmtES(dailyKwh,2) + " kWh/día (" + fmtInt(monthly) + " kWh/mes), pico simultáneo " + fmtInt(peakW) + " W. Me recomendó: " + sistema + " — " + numPaneles + " paneles de 550 W, batería de " + battKwh + " kWh e inversor de " + fmtInt(invW) + " W. Quiero cotizarlo.";
+      waBtn.href = "https://wa.me/5353237783?text=" + encodeURIComponent(msg);
+    }
   }
-  document.querySelectorAll(".cap").forEach(function(b){
+
+  // Ubicación
+  document.querySelectorAll(".loc-btn").forEach(function(b){
     b.addEventListener("click", function(){
-      document.querySelectorAll(".cap").forEach(function(x){ x.classList.remove("on"); });
+      document.querySelectorAll(".loc-btn").forEach(function(x){x.classList.remove("on");});
       b.classList.add("on");
-      wh = parseInt(b.getAttribute("data-wh"), 10);
-      calc();
+      locActual = b.getAttribute("data-loc");
+      calcConsumo();
     });
   });
-  document.querySelectorAll(".app").forEach(function(b){
-    b.setAttribute("aria-pressed", b.classList.contains("on") ? "true" : "false");
-    b.addEventListener("click", function(){
-      b.classList.toggle("on");
-      b.setAttribute("aria-pressed", b.classList.contains("on") ? "true" : "false");
-      calc();
+  // Formulario otros equipos
+  var cForm=document.getElementById("customForm");
+  if(cForm){
+    cForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      var name=document.getElementById("cName").value.trim();
+      var watts=parseFloat(document.getElementById("cWatts").value);
+      var hours=parseFloat(document.getElementById("cHours").value);
+      var qty=parseInt(document.getElementById("cQty").value,10)||1;
+      if(!name || !watts || !hours){ return; }
+      customEquipos.push({name:name, watts:watts, hours:hours, qty:qty});
+      document.getElementById("cName").value=""; document.getElementById("cWatts").value=""; document.getElementById("cHours").value=""; document.getElementById("cQty").value="1";
+      renderCustom(); calcConsumo();
     });
-  });
-  calc();
+  }
+  renderEquipos();
+  renderCustom();
+  calcConsumo();
 })();
 </script>
 </body>
